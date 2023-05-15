@@ -1,21 +1,29 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function AppHeader({}) {
-    return(
-        <View>
-            <Text style={styles.header}>
-                Baham (باہم)
-            </Text>
-        </View>
-    );
+export default function AppHeader(props) {
+  return (
+    <View style={styles.header}>
+      <Text style={styles.heading}>{props.heading}</Text>
+      <Text style={styles.slogan}>{props.slogan}</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
     header: {
-        padding: 20,
-        fontSize: 30,
-        textAlign: 'center',
-        fontWeight: 'bold',
-        color: 'black'
+        flex: 0.15,
+        padding: 15,
+        backgroundColor: "pink", 
+    },
+    heading: {
+        paddingBottom: 5, 
+        fontSize: 30, 
+        textAlign: 'center' 
+    },
+    slogan: {
+        paddingBottom: 5, 
+        fontSize: 18, 
+        textAlign: 'center', 
+        fontStyle: 'italic' 
     }
 });
